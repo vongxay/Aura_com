@@ -53,6 +53,7 @@ interface PaymentHistory {
 interface Order {
   id: string
   created_at: string
+  updated_at?: string
   status: string
   total_amount: number
   shipping_address: string
@@ -678,7 +679,7 @@ export default function OrderDetailPage({ params }: { params: { id: string } }) 
             <DialogTitle>ยืนยันการชำระเงิน</DialogTitle>
             <DialogDescription>
               คุณต้องการยืนยันการชำระเงินสำหรับคำสั่งซื้อนี้ใช่หรือไม่?
-              การยืนยันจะเปลี่ยนสถานะการชำระเงินเป็น "ยืนยันแล้ว"
+              การยืนยันจะเปลี่ยนสถานะการชำระเงินเป็น &quot;ยืนยันแล้ว&quot;
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -701,7 +702,7 @@ export default function OrderDetailPage({ params }: { params: { id: string } }) 
             <DialogTitle>ปฏิเสธการชำระเงิน</DialogTitle>
             <DialogDescription>
               คุณต้องการปฏิเสธการชำระเงินสำหรับคำสั่งซื้อนี้ใช่หรือไม่?
-              การปฏิเสธจะเปลี่ยนสถานะการชำระเงินเป็น "ยกเลิก"
+              การปฏิเสธจะเปลี่ยนสถานะการชำระเงินเป็น &quot;ยกเลิก&quot;
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -742,4 +743,3 @@ export default function OrderDetailPage({ params }: { params: { id: string } }) 
     </div>
   )
 }
-</rewritten_file>
